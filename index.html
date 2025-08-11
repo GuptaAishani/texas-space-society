@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Space Society</title>
+  <style>
+    body {
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background-color: #01020a; 
+      color: white; 
+      text-align: center;
+    }
+    header {
+      height: 100vh;
+      background: url('assets/nasa_moon.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.5rem;
+      max-width: 600px;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .members-grid {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .member {
+      position: relative;
+      width: 200px;
+      cursor: pointer;
+    }
+    .member img {
+      width: 100%;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .member:hover img {
+      transform: scale(1.05);
+    }
+    .member-info {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      width: 100%;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .member:hover .member-info {
+      opacity: 1;
+    }
+    .competitions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .competition-card {
+      background: #222;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 250px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .competition-card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      padding: 2rem 1rem;
+      background: #111;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Texas Space Society</h1>
+    <p>Exploring lunar & Martian settlements, hardware projects, and student competitions — based in Texas.</p>
+  </header>
+
+  <section id="about">
+    <h2>About the Society</h2>
+    <p>Texas Space Society is a student-run organization focused on designing, building, and testing hardware and mission concepts for lunar and Martian exploration. We run workshops, mentor high-school teams, and compete in national and international aerospace competitions.</p>
+  </section>
+
+  <section id="members">
+    <h2>Meet Our Team</h2>
+    <div class="members-grid">
+      <div class="member">
+        <img src="assets/member1.jpg" alt="Alex Johnson" />
+        <div class="member-info">
+          <strong>Alex Johnson</strong><br />President
+        </div>
+      </div>
+      <div class="member">
+        <img src="assets/member2.jpg" alt="Jamie Lee" />
+        <div class="member-info">
+          <strong>Jamie Lee</strong><br />VP & Outreach
+        </div>
+      </div>
+      <div class="member">
+        <img src="assets/member3.jpg" alt="Taylor Smith" />
+        <div class="member-info">
+          <strong>Taylor Smith</strong><br />GNC Lead
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitions">
+    <h2>Upcoming Competitions</h2>
+    <div class="competitions">
+      <div class="competition-card">
+        <h3>Lunar Settlement Challenge</h3>
+        <p><em>Nov 2025</em></p>
+        <p>Design a sustainable moon base; multi-disciplinary team.</p>
+      </div>
+      <div class="competition-card">
+        <h3>Mars Habitat Hackathon</h3>
+        <p><em>Jan 2026</em></p>
+        <p>48-hour challenge to prototype Martian habitat subsystems.</p>
+      </div>
+      <div class="competition-card">
+        <h3>CubeSat Build-off</h3>
+        <p><em>Mar 2026</em></p>
+        <p>Build and test a CubeSat bus demo for payload integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Texas Space Society<br />
+    Follow us: Instagram · LinkedIn · Email
+  </footer>
+</body>
+</html>
